@@ -7,13 +7,21 @@
 3. API response will be:
   a. Current weather temperature in celcius and fahrenheit
   b. Type of the weather. If temperature is <= 18°C return "Cold". If temperature  is >= 19°C and <= 30°C return "Warm". If temperature is >= 31°C return "Hot"
-  
+
+Example request:
+```json
+{
+	"latitude": -8.112,
+	"longitude": 115.08818,
+}
+```
+
 Example response:
 ```json
 {
 	"temperature_in_celicus": "19°C",
 	"temperature_in_fahrenheit": "66.2°C",
-  "type": "Warm"
+  	"type": "Warm"
 }
 ```
 
