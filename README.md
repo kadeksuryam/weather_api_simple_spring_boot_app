@@ -31,7 +31,7 @@ For weather API, use https://open-meteo.com/
 # Answer
 ## How to run the app
 1. execute: ```cd demo```
-2. execute: ```./gradlew clean runBoot```
+2. execute: ```./gradlew clean bootRun```
 3. example HTTP request: 
 ```
 curl -H 'Content-Type: application/json' -d '{"latitude": -8.112, "longitude": 115.08818}' -X POST http://localhost:8080/weather
