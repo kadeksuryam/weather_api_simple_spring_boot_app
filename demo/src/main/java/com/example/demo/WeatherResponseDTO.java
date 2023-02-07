@@ -11,4 +11,7 @@ public class WeatherResponseDTO {
     private String temperatureInCelcius;
     @JsonProperty("temperature_in_fahrenheit")
     private String temperatureInFahrenheit;
+
+    @JsonProperty("type")
+    private String type;
 }

@@ -29,8 +29,15 @@ public class WeatherServiceImpl  implements  WeatherService {
 
 
         WeatherResponseDTO responseDTO = new WeatherResponseDTO();
-        responseDTO.setTemperatureInCelcius(celciusRes.getCurrentWeather().getTemperature());
-        responseDTO.setTemperatureInFahrenheit(fahRes.getCurrentWeather().getTemperature());
+        Float tempC = Float.parseFloat(celciusRes.getCurrentWeather().getTemperature());
+        Float tempF = Float.parseFloat(fahRes.getCurrentWeather().getTemperature());
+        responseDTO.setTemperatureInCelcius(tempC + "°C");
+        responseDTO.setTemperatureInFahrenheit(tempF + "°F");
+
+        if(tempC <= 18) responseDTO.setType("Cold");
+        else if(tempC >= 19 && tempC <= 30) responseDTO.setType("Warm");
+        else if(tempC >= 31) responseDTO.setType("Hot");
+
 
         return responseDTO;
 
